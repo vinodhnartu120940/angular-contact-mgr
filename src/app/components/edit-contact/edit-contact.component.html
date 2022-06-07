@@ -1,0 +1,56 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <p class="h3 fw-bold text-danger mt-5">Edit Contact</p>
+            <p class="fst-italic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem tenetur ad eaque
+                libero amet assumenda magni at sint laudantium, inventore quisquam, ullam magnam eveniet, reprehenderit
+                placeat labore odio rem saepe.</p>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-4">
+            <form [formGroup]="contactForm" (ngSubmit)="editedData()">
+                <div class="input-group mb-2">
+                    <!-- <span class="input-group-text">@</span> -->
+                    <input type="text" class="form-control" placeholder="Name" name="name" formControlName="name">
+                </div>
+
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control" placeholder="PhotoURL" name="PhoteURL"
+                        formControlName="photo">
+                    <!-- <span class="input-group-text">@example.com</span> -->
+                </div>
+                <div class="input-group mb-2">
+                    <!-- <span class="input-group-text">@</span> -->
+                    <input type="text" class="form-control" placeholder="Email" name="email" formControlName="email">
+                </div>
+
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control" placeholder="Mobile" name="mobile" formControlName="mobile">
+                    <!-- <span class="input-group-text">@example.com</span> -->
+                </div>
+                <div class="input-group mb-2">
+                    <!-- <span class="input-group-text">@</span> -->
+                    <input type="text" class="form-control" placeholder="Company" name="company"
+                        formControlName="company">
+                </div>
+
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control" placeholder="Title" name="title" formControlName="title">
+                    <!-- <span class="input-group-text">@example.com</span> -->
+                </div>
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control" placeholder="Select Group" formControlName="groupId">
+                    <!-- <span class="input-group-text">@example.com</span> -->
+                </div>
+                <button class="btn btn-danger" type="submit">Update</button>
+                <input type="button" routerLink="/" value="Close" class="btn btn-dark ms-2">
+            </form>
+        </div>
+        <div class="col-sm-4" *ngIf="data">
+            <img [src]="data.photo" alt="" class='img-fluid rounded-circle'>
+        </div>
+    </div>
+</div>

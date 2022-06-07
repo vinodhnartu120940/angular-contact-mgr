@@ -1,0 +1,11 @@
+.btn-primary {
+    color: #fff;
+    background-color: #1b3be3;
+    border-color: #0d6efd;
+    border: none;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
